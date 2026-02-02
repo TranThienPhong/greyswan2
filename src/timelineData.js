@@ -39,7 +39,7 @@ export const timelineData = [
         year: "1913",
         title: "The Federal Reserve established; 16th & 17th Amendments (income tax; direct election of Senators).",
         side: "left",
-        images: ["/era1/1913.jpg", "/era1/1913_under.jpg"]
+        images: ["/era1/1913_under.jpg", "/era1/1913.jpg"]
       },
       {
         year: "1923",
@@ -57,7 +57,7 @@ export const timelineData = [
         year: "1933-34",
         title: "New Deal 'Alphabet Agencies'; Securities Exchange Act establishes the SEC",
         side: "left",
-        images: ["/era2/1933-1934_top.avif", "/era2/1933-1934_bot.avif"]
+        images: ["/era2/1933-1934_bot.avif", "/era2/1933-1934_top.avif"]
       },
       {
         year: "1938",
