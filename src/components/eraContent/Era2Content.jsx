@@ -143,7 +143,7 @@ const Era2Content = ({ openLightbox }) => {
                 <img
                   src="/era2/1931.png"
                   alt="1931"
-                  className="absolute w-full max-w-[226px] h-[] translate-x-[24.7rem] -translate-y-[4rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[226px] h-[350px] translate-x-[24.7rem] -translate-y-[4rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
             </motion.div>
@@ -245,7 +245,7 @@ const Era2Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-left max-w-sm"
+              className="text-left max-w-sm mt-12"
             >
               <h3 className="text-xl md:text-2xl font-bold text-[#ba924c] font-sans">1938</h3>
               <p className="text-base md:text-lg leading-relaxed mb-3" style={{ color: 'rgba(186, 146, 76, 0.7)' }}>
@@ -263,18 +263,18 @@ const Era2Content = ({ openLightbox }) => {
                 <img
                   src="/era2/1938.jpg"
                   alt="1938"
-                  className="w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[275px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
             </motion.div>
           </div>
 
           {/* Custom Connector Line */}
-          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform -translate-y-[1.8rem] pointer-events-none z-0"
-            style={{ left: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform translate-y-[5rem] pointer-events-none z-0"
+            style={{ left: 'calc(50% + 3px)', width: 'calc(30% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[7.6rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -294,7 +294,7 @@ const Era2Content = ({ openLightbox }) => {
                 <img
                   src="/era2/1940.jpg"
                   alt="1940"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="absolute w-full max-w-[300px] h-auto -translate-x-[21rem] -translate-y-[3rem] border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
             </motion.div>
@@ -303,11 +303,11 @@ const Era2Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-right max-w-xs"
+              className="text-right max-w-md"
             >
               <h3 className="text-xl md:text-2xl font-bold text-white font-sans">1940</h3>
               <p className="text-base md:text-lg text-white/60 leading-relaxed mb-3">
-                Investment Advisers Act: publisher's exemption for bona fide general-circulation financial publications.
+                Investment Advisers Act: <br /> publisher's exemption for bona fide <br />general-circulation financial publications.
               </p>
             </motion.div>
           </div>
@@ -316,11 +316,11 @@ const Era2Content = ({ openLightbox }) => {
           <div></div>
 
           {/* Custom Connector Line */}
-          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ right: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[4.2rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(38% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[6.2rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -340,7 +340,7 @@ const Era2Content = ({ openLightbox }) => {
                 <img
                   src="/era2/1944_1.webp"
                   alt="1944"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="absolute w-full max-w-[200px] h-auto -translate-x-[18rem] translate-y-[2rem] border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
             </motion.div>
@@ -349,7 +349,7 @@ const Era2Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-right max-w-xs"
+              className="text-right max-w-xs mt-8"
             >
               <h3 className="text-xl md:text-2xl font-bold text-white font-sans">1944</h3>
               <p className="text-base md:text-lg text-white/60 leading-relaxed mb-3">
@@ -362,11 +362,11 @@ const Era2Content = ({ openLightbox }) => {
           <div></div>
 
           {/* Custom Connector Line */}
-          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ right: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[4.2rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(30% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[6.2rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
