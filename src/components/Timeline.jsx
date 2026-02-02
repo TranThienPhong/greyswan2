@@ -115,8 +115,8 @@ const Timeline = ({ data }) => {
 
               {/* Arrow at bottom of last era - scaled to match 6px timeline width */}
               {eraIndex === data.length - 1 && (
-                <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 z-20">
-                  <svg width="6" height="12" viewBox="0 0 6 12" preserveAspectRatio="none">
+                <div className="absolute left-1/2 -bottom-3 transform -translate-x-[0.5rem] z-20" style={{ width: '6px' }}>
+                  <svg width="16" height="12" viewBox="0 0 6 12" preserveAspectRatio="none" style={{ display: 'block' }}>
                     <defs>
                       <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="50%" stopColor="white" />
