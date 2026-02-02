@@ -200,12 +200,25 @@ export const timelineData = [
         images: ["/era4/1999-2019.jfif"]
       },
       {
-        year: "2003 → 2011 → 2022",
-        title: "Bonner & Wiggin: Financial Reckoning Day (incl. 3rd ed. 2022)",
+        isGrouped: true,
         side: "right",
-        images: ["/era4/2003_1.png", "/era4/2003_2.png", "/era4/2003_3.png"]
-      },
-
+        groupId: "books-trilogy",
+        sharedImages: ["/era4/2003_1.png", "/era4/2003_2.png", "/era4/2003_3.png"],
+        items: [
+          {
+            year: "2003 → 2011 → 2022",
+            title: "Bonner & Wiggin: Financial Reckoning Day (incl. 3rd ed. 2022)"
+          },
+          {
+            year: "2004 → 2009 → 2023",
+            title: "Addison Wiggin Demise of the Dollar (incl. 3rd ed. 2023)"
+          },
+          {
+            year: "2005 → 2009 → 2024",
+            title: "Empire of Debt series (incl. Empire of Debt, 3rd ed. 2024)"
+          }
+        ]
+      }
     ]
   },
   {

@@ -131,10 +131,10 @@ const Timeline = ({ data }) => {
               {/* Events */}
               <div className="relative z-20 space-y-16 md:space-y-20 py-12 px-4 md:px-12">
                 {(() => {
-                  // Sort all events by year
+                  // Sort all events by year, handling grouped events
                   const sortedEvents = [...era.events].sort((a, b) => {
-                    const yearA = getStartYear(a.year);
-                    const yearB = getStartYear(b.year);
+                    const yearA = a.isGrouped ? getStartYear(a.items[0].year) : getStartYear(a.year);
+                    const yearB = b.isGrouped ? getStartYear(b.items[0].year) : getStartYear(b.year);
                     return yearA - yearB;
                   });
 
@@ -145,6 +145,17 @@ const Timeline = ({ data }) => {
                   sortedEvents.forEach((event, index) => {
                     if (processedIndices.has(index)) return;
 
+                    // Handle grouped events (like book trilogy)
+                    if (event.isGrouped) {
+                      groupedEvents.push({
+                        leftEvent: event.side === 'left' ? event : null,
+                        rightEvent: event.side === 'right' ? event : null,
+                        isGrouped: true
+                      });
+                      processedIndices.add(index);
+                      return;
+                    }
+
                     const eventYear = getStartYear(event.year);
                     const isLeft = event.side === 'left';
 
@@ -154,6 +165,7 @@ const Timeline = ({ data }) => {
 
                     for (let i = index + 1; i < sortedEvents.length; i++) {
                       if (processedIndices.has(i)) continue;
+                      if (sortedEvents[i].isGrouped) continue; // Skip grouped events
                       const otherYear = getStartYear(sortedEvents[i].year);
                       if (otherYear === eventYear && sortedEvents[i].side !== event.side) {
                         matchingEvent = sortedEvents[i];
@@ -183,6 +195,125 @@ const Timeline = ({ data }) => {
                     const leftEvent = group.leftEvent;
                     const rightEvent = group.rightEvent;
 
+                    // Handle grouped events (book trilogy pattern)
+                    if (group.isGrouped) {
+                      const groupedEvent = rightEvent || leftEvent;
+                      const isRight = groupedEvent.side === 'right';
+
+                      return (
+                        <div
+                          key={`${era.era}-${eventIndex}-grouped`}
+                          className="timeline-event relative"
+                        >
+                          {/* Desktop Layout for Grouped Events */}
+                          <div className="hidden md:grid md:grid-cols-2 gap-12 items-center">
+                            {/* LEFT COLUMN */}
+                            <div className="flex items-center justify-end">
+                              {!isRight && <div>Grouped left events not implemented yet</div>}
+                            </div>
+
+                            {/* RIGHT COLUMN - Grouped Book Trilogy */}
+                            <div className="flex items-center justify-start gap-6">
+                              {isRight && (
+                                <>
+                                  {/* Text Stack on LEFT */}
+                                  <div className="flex flex-col gap-8 max-w-xs">
+                                    {groupedEvent.items.map((item, idx) => (
+                                      <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.6, delay: idx * 0.1 }}
+                                        className="text-left relative"
+                                      >
+                                        <h3 className="text-xl md:text-2xl font-bold text-muted-gold mb-1 font-sans">
+                                          {item.year}
+                                        </h3>
+                                        <p className="text-sm md:text-base leading-relaxed"
+                                          style={{ color: 'rgba(186, 146, 76, 0.7)' }}>
+                                          {item.title}
+                                        </p>
+
+                                        {/* Connector Line extending to right */}
+                                        <div className="absolute left-full top-1/2 w-6 h-[2px] bg-muted-gold/60 transform -translate-y-1/2" />
+                                      </motion.div>
+                                    ))}
+                                  </div>
+
+                                  {/* Shared Images on RIGHT */}
+                                  {groupedEvent.sharedImages && groupedEvent.sharedImages.length > 0 && (
+                                    <motion.div
+                                      initial={{ opacity: 0, x: 30 }}
+                                      whileInView={{ opacity: 1, x: 0 }}
+                                      viewport={{ once: true }}
+                                      transition={{ duration: 0.6, delay: 0.3 }}
+                                      className="flex flex-wrap gap-3 justify-start flex-1"
+                                    >
+                                      {groupedEvent.sharedImages.map((img, imgIndex) => (
+                                        <div
+                                          key={imgIndex}
+                                          className="cursor-pointer group"
+                                          onClick={() => openLightbox(groupedEvent.sharedImages, imgIndex, 'right')}
+                                        >
+                                          <img
+                                            src={img}
+                                            alt={`Books - ${imgIndex + 1}`}
+                                            className="w-full max-w-[200px] h-auto border-2 border-muted-gold/60 
+                                                 hover:border-muted-gold transition-all duration-300 
+                                                 group-hover:scale-105 object-cover"
+                                          />
+                                        </div>
+                                      ))}
+                                    </motion.div>
+                                  )}
+                                </>
+                              )}
+                            </div>
+
+                            {/* Center Dot */}
+                            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full border-4 border-rich-black z-10"
+                              style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
+                          </div>
+
+                          {/* Mobile Layout for Grouped Events */}
+                          <div className="md:hidden space-y-6">
+                            {groupedEvent.items.map((item, idx) => (
+                              <div key={idx} className="text-center">
+                                <h3 className="text-xl font-bold mb-1 font-sans text-muted-gold">
+                                  {item.year}
+                                </h3>
+                                <p className="text-sm leading-relaxed"
+                                  style={{ color: 'rgba(186, 146, 76, 0.7)' }}>
+                                  {item.title}
+                                </p>
+                              </div>
+                            ))}
+
+                            {groupedEvent.sharedImages && groupedEvent.sharedImages.length > 0 && (
+                              <div className="flex flex-wrap gap-3 justify-center mt-4">
+                                {groupedEvent.sharedImages.map((img, imgIndex) => (
+                                  <div
+                                    key={imgIndex}
+                                    className="cursor-pointer"
+                                    onClick={() => openLightbox(groupedEvent.sharedImages, imgIndex, 'right')}
+                                  >
+                                    <img
+                                      src={img}
+                                      alt={`Books - ${imgIndex + 1}`}
+                                      className="w-full max-w-[200px] h-auto border-2 border-muted-gold/60 hover:border-muted-gold
+                                           transition-all duration-300 object-cover"
+                                    />
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Regular event rendering
                     return (
                       <div
                         key={`${era.era}-${eventIndex}`}
