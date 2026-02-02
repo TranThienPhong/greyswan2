@@ -16,20 +16,20 @@ const Era2Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="flex gap-3 justify-end"
+              className="absolute grid grid-cols-1 justify-end mr-[30rem] z-50"
             >
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era1/1913_under.jpg', '/era1/1913.jpg'], 0, 'left')}>
-                <img
-                  src="/era1/1913_under.jpg"
-                  alt="1913-1"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
-                />
-              </div>
               <div className="cursor-pointer group" onClick={() => openLightbox(['/era1/1913_under.jpg', '/era1/1913.jpg'], 1, 'left')}>
                 <img
                   src="/era1/1913.jpg"
                   alt="1913-2"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="w-full max-w-[250px] h-[128px] border-2 order-1 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-top grayscale hover:grayscale-0 z-50"
+                />
+              </div>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era1/1913_under.jpg', '/era1/1913.jpg'], 0, 'left')}>
+                <img
+                  src="/era1/1913_under.jpg"
+                  alt="1913-1"
+                  className="w-full max-w-[200px] h-auto border-2 order-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
             </motion.div>
@@ -51,11 +51,11 @@ const Era2Content = ({ openLightbox }) => {
           <div></div>
 
           {/* Custom Connector Line */}
-          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ right: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[4rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(40% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[6rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -90,18 +90,18 @@ const Era2Content = ({ openLightbox }) => {
                 <img
                   src="/era2/1923.jfif"
                   alt="1923"
-                  className="w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[240px] h-[300px] translate-x-[3rem] -translate-y-[8rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-fill z-50"
                 />
               </div>
             </motion.div>
           </div>
 
           {/* Custom Connector Line */}
-          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ left: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform translate-y-[2.4rem] pointer-events-none z-0"
+            style={{ left: 'calc(50% + 3px)', width: 'calc(24% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[2.6rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -113,15 +113,15 @@ const Era2Content = ({ openLightbox }) => {
           <div></div>
 
           {/* RIGHT COLUMN */}
-          <div className="flex items-start justify-start gap-6">
+          <div className="relative flex items-start justify-start gap-6">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-left max-w-sm"
+              className="text-left max-w-sm mt-20"
             >
               <h3 className="text-xl md:text-2xl font-bold text-[#ba924c] font-sans">1931</h3>
-              <p className="text-base md:text-lg leading-relaxed mb-3" style={{ color: 'rgba(186, 146, 76, 0.7)' }}>
+              <p className="text-base md:text-lg leading-relaxed " style={{ color: 'rgba(186, 146, 76, 0.7)' }}>
                 Value Line founded.
               </p>
             </motion.div>
@@ -132,22 +132,29 @@ const Era2Content = ({ openLightbox }) => {
               viewport={{ once: true }}
               className="flex gap-3"
             >
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era2/1931.png'], 0, 'right')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era2/1931_vl_logo.png', '/era2/1931.png'], 0, 'right')}>
+                <img
+                  src="/era2/1931_vl_logo.png"
+                  alt="1931"
+                  className="absolute w-full max-w-[225px] h-auto border-2 translate-x-[25.5rem] -translate-y-[9rem] border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                />
+              </div>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era2/1931.png', '/era2/1931_vl_logo.png'], 1, 'right')}>
                 <img
                   src="/era2/1931.png"
                   alt="1931"
-                  className="w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[226px] h-[] translate-x-[24.7rem] -translate-y-[4rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
             </motion.div>
           </div>
 
           {/* Custom Connector Line */}
-          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ left: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform translate-y-[6rem] pointer-events-none z-0"
+            style={{ left: 'calc(50% + 3px)', width: 'calc(45% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[8.4rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -167,14 +174,14 @@ const Era2Content = ({ openLightbox }) => {
                 <img
                   src="/era2/1933-1934_bot.avif"
                   alt="1933-34-1"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="absolute w-full max-w-[200px] h-auto -translate-x-[16rem] border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
               <div className="cursor-pointer group" onClick={() => openLightbox(['/era2/1933-1934_bot.avif', '/era2/1933-1934_top.avif'], 1, 'left')}>
                 <img
                   src="/era2/1933-1934_top.avif"
                   alt="1933-34-2"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="absolute w-full max-w-[200px] h-auto -translate-x-[16.75rem] -translate-y-[8.4rem] border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
             </motion.div>
@@ -183,11 +190,11 @@ const Era2Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-right max-w-xs"
+              className="text-right max-w-sm"
             >
               <h3 className="text-xl md:text-2xl font-bold text-white font-sans">1933-34</h3>
               <p className="text-base md:text-lg text-white/60 leading-relaxed mb-3">
-                New Deal 'Alphabet Agencies'; Securities Exchange Act establishes the SEC
+                New Deal 'Alphabet Agencies'; <br /> Securities Exchange Act establishes the <span className='font-bold text-white/80'>SEC</span>
               </p>
             </motion.div>
           </div>
@@ -195,12 +202,33 @@ const Era2Content = ({ openLightbox }) => {
           {/* RIGHT COLUMN - Empty */}
           <div></div>
 
-          {/* Custom Connector Line */}
-          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ right: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          {/* Custom Connector Lines - Rectangle Formation */}
+          {/* Top horizontal line */}
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[4.1rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(8% - 48px - 3px)' }} />
+
+          {/* Middle horizontal line */}
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-x-[6rem] translate-y-[6.1rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(28.6% - 48px - 3px)' }} />
+
+          {/* Bottom horizontal line */}
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[8.1rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(8% - 48px - 3px)' }} />
+
+          {/* Left vertical line - connects top and bottom at the left edge */}
+          <div className="absolute right-1/2 top-1/2 w-[2px] bg-white/60 transform translate-y-[4.1rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px + 8% - 48px - 3px)', height: '4.1rem' }} />
+
+          {/* Right vertical line - connects top and bottom at the right edge (near center) */}
+          <div className="absolute right-1/2 top-1/2 w-[2px] bg-white/60 transform -translate-x-[35rem] translate-y-[4.1rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', height: '2rem' }} />
+
+
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[5.2rem] w-5 h-5 rounded-full z-10"
+            style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[9.2rem]  w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -242,7 +270,7 @@ const Era2Content = ({ openLightbox }) => {
           </div>
 
           {/* Custom Connector Line */}
-          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform -translate-y-1/2 pointer-events-none z-0"
+          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform -translate-y-[1.8rem] pointer-events-none z-0"
             style={{ left: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
