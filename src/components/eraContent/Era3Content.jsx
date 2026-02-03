@@ -33,14 +33,14 @@ const Era3Content = ({ openLightbox }) => {
               viewport={{ once: true }}
               className="flex gap-3"
             >
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1963-2011.jpg', '/era3/1963-2011_ontheleft.jpg'], 0, 'right')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1963-2011_ontheleft.jpg', '/era3/1963-2011.jpg'], 0, 'right')}>
                 <img
                   src="/era3/1963-2011_ontheleft.jpg"
                   alt="1963-2011"
                   className="absolute w-full max-w-[115px] h-[150px] translate-x-[13.1rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1963-2011.jpg'], 1, 'right')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1963-2011.jpg', '/era3/1963-2011_ontheleft.jpg'], 1, 'right')}>
                 <img
                   src="/era3/1963-2011.jpg"
                   alt="1963-2011"
@@ -256,7 +256,7 @@ const Era3Content = ({ openLightbox }) => {
                 />
               </div>
 
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1979_book_1.jpg', '/era3/1979_book_2.jpg', '/era3/1979_book_3.jpg'], 2, 'right')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1979_book_1.jpg', '/era3/1979_book_2.jpg', '/era3/1979_book_3.jpg'], 1, 'right')}>
                 <img
                   src="/era3/1979_book_2.jpg"
                   alt="1979-2"
@@ -264,7 +264,7 @@ const Era3Content = ({ openLightbox }) => {
                 />
               </div>
 
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1979_book_1.jpg', '/era3/1979_book_2.jpg', '/era3/1979_book_3.jpg'], 3, 'right')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1979_book_1.jpg', '/era3/1979_book_2.jpg', '/era3/1979_book_3.jpg'], 2, 'right')}>
                 <img
                   src="/era3/1979_book_3.jpg"
                   alt="1979-2"

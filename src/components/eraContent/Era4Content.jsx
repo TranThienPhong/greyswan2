@@ -18,14 +18,14 @@ const Era4Content = ({ openLightbox }) => {
               viewport={{ once: true }}
               className="flex gap-3 justify-end"
             >
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era4/1990s.webp', '/era4/1990s_top.webp'], 0, 'left')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era4/1990s_top.webp', '/era4/1990s.webp'], 0, 'left')}>
                 <img
                   src="/era4/1990s_top.webp"
                   alt="1990s"
                   className="absolute w-full max-w-[225px] h-auto -translate-x-[16rem] translate-y-[1rem] border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era4/1990s.webp'], 1, 'left')}>
+              <div className="cursor-pointer group" onClick={() => openLightbox(['/era4/1990s_top.webp', '/era4/1990s.webp'], 1, 'left')}>
                 <img
                   src="/era4/1990s.webp"
                   alt="1990s"
