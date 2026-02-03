@@ -157,9 +157,9 @@ const Timeline = ({ data }) => {
       {lightbox.isOpen && (
         <Lightbox
           images={lightbox.images}
-          currentIndex={lightbox.currentIndex}
+          isOpen={lightbox.isOpen}
+          initialIndex={lightbox.currentIndex}
           onClose={closeLightbox}
-          onNavigate={navigateLightbox}
           side={lightbox.side}
         />
       )}
