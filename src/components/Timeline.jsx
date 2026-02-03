@@ -125,7 +125,7 @@ const Timeline = ({ data }) => {
             )}
 
             {/* Central Vertical Line - Half white/half gold - within this era only */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-[6px] transform -translate-x-1/2 z-10"
+            <div className="absolute left-1/2 top-0 bottom-0 w-[8px] transform -translate-x-1/2 z-10"
               style={{ background: 'linear-gradient(to right, white 50%, #ba924c 50%)' }} />
 
             {/* Arrow at bottom of last era - scaled to match 6px timeline width */}
