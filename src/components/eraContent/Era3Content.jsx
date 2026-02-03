@@ -385,7 +385,7 @@ const Era3Content = ({ openLightbox }) => {
                 <img
                   src="/era3/1983_2.jpg"
                   alt="1983-2"
-                  className="absolute w-full max-w-[275px] translate-x-[13.58rem] -translate-y-[4.5rem] h-[11.3rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[350px] translate-x-[13.58rem] -translate-y-[4.5rem] h-[11.3rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover object-top z-50"
                 />
               </div>
             </motion.div>
@@ -431,25 +431,25 @@ const Era3Content = ({ openLightbox }) => {
                 <img
                   src="/era3/1984_1.jpg"
                   alt="1984-1"
-                  className="absolute w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[150px] h-[8rem] translate-x-[0.35rem] translate-y-[2rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
               <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1984_1.jpg', '/era3/1984_2.webp'], 1, 'right')}>
                 <img
                   src="/era3/1984_2.webp"
                   alt="1984-2"
-                  className="absolute w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[200px] h-auto translate-x-[9rem] translate-y-[2.1rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
             </motion.div>
           </div>
 
           {/* Custom Connector Line */}
-          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform translate-y-1/2 pointer-events-none z-0"
-            style={{ left: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform translate-y-[2.6rem] pointer-events-none z-0"
+            style={{ left: 'calc(50% + 3px)', width: 'calc(40% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[2.8rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -469,21 +469,7 @@ const Era3Content = ({ openLightbox }) => {
                 <img
                   src="/era3/1985_1.jpg"
                   alt="1985-1"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
-                />
-              </div>
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1985_1.jpg', '/era3/1985_2.jpg', '/era3/1985_3.jpg'], 1, 'left')}>
-                <img
-                  src="/era3/1985_2.jpg"
-                  alt="1985-2"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
-                />
-              </div>
-              <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1985_1.jpg', '/era3/1985_2.jpg', '/era3/1985_3.jpg'], 2, 'left')}>
-                <img
-                  src="/era3/1985_3.jpg"
-                  alt="1985-3"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="absolute w-full max-w-[350px] h-auto -translate-x-[25rem] -translate-y-[14rem] border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
             </motion.div>
@@ -492,11 +478,11 @@ const Era3Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-right max-w-xs"
+              className="text-right max-w-lg"
             >
               <h3 className="text-xl md:text-2xl font-bold text-white font-sans">1985</h3>
               <p className="text-base md:text-lg text-white/60 leading-relaxed mb-3">
-                Lowe v. SEC affirms the publisher's exemption; the financial newsletter industry gets real.
+                Lowe v. SEC affirms the publisher's exemption;<br /> the financial newsletter industry gets real.
               </p>
             </motion.div>
           </div>
@@ -505,11 +491,15 @@ const Era3Content = ({ openLightbox }) => {
           <div></div>
 
           {/* Custom Connector Line */}
-          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ right: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[3.7rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(32% - 48px - 3px)' }} />
+
+          {/* Left vertical line - connects top and bottom at the left edge */}
+          <div className="absolute right-1/2 top-1/2 w-[2px] bg-white/60 transform -translate-y-[2.2rem] -translate-x-[27.1rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px + 8% - 48px - 3px)', height: '6rem' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[4.8rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
@@ -529,7 +519,7 @@ const Era3Content = ({ openLightbox }) => {
                 <img
                   src="/era3/1987.avif"
                   alt="1987"
-                  className="w-full max-w-[200px] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
+                  className="absolute w-full max-w-[250px] -translate-x-[33rem] -translate-y-[6rem] h-auto border-2 border-white/60 hover:border-white transition-all duration-300 group-hover:scale-105 object-cover grayscale hover:grayscale-0 z-50"
                 />
               </div>
             </motion.div>
@@ -538,7 +528,7 @@ const Era3Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-right max-w-xs"
+              className="text-right max-w-xs mt-[6rem]"
             >
               <h3 className="text-xl md:text-2xl font-bold text-white font-sans">1987</h3>
               <p className="text-base md:text-lg text-white/60 leading-relaxed mb-3">
@@ -553,11 +543,11 @@ const Era3Content = ({ openLightbox }) => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-left max-w-xs"
+              className="text-left max-w-lg mb-[6rem] mt-[6rem]"
             >
               <h3 className="text-xl md:text-2xl font-bold text-[#ba924c] font-sans">1987-97</h3>
               <p className="text-base md:text-lg leading-relaxed mb-3" style={{ color: 'rgba(186, 146, 76, 0.7)' }}>
-                Blood in the Streets (1987); The Great Reckoning (1991/93); The Sovereign Individual (1997)
+                Blood in the Streets (1987); The Great Reckoning (1991/93); <br /> The Sovereign Individual (1997)
               </p>
             </motion.div>
 
@@ -571,34 +561,34 @@ const Era3Content = ({ openLightbox }) => {
                 <img
                   src="/era3/1987-97_1.jpg"
                   alt="1987-97-1"
-                  className="w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[125px] h-[200px] translate-y-[3rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
               <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1987-97_1.jpg', '/era3/1987-97_2.jpg', '/era3/1987-97_3.jpg'], 1, 'right')}>
                 <img
                   src="/era3/1987-97_2.jpg"
                   alt="1987-97-2"
-                  className="w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[125px] h-[200px] translate-y-[3rem] translate-x-[7.05rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
               <div className="cursor-pointer group" onClick={() => openLightbox(['/era3/1987-97_1.jpg', '/era3/1987-97_2.jpg', '/era3/1987-97_3.jpg'], 2, 'right')}>
                 <img
                   src="/era3/1987-97_3.jpg"
                   alt="1987-97-3"
-                  className="w-full max-w-[200px] h-auto border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
+                  className="absolute w-full max-w-[125px] h-[200px] translate-y-[3rem] translate-x-[14.1rem] border-2 border-[#ba924c]/60 hover:border-[#ba924c] transition-all duration-300 group-hover:scale-105 object-cover z-50"
                 />
               </div>
             </motion.div>
           </div>
 
           {/* Custom Connector Lines - Both sides */}
-          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ right: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
-          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform -translate-y-1/2 pointer-events-none z-0"
-            style={{ left: 'calc(50% + 3px)', width: 'calc(50% - 48px - 3px)' }} />
+          <div className="absolute right-1/2 top-1/2 h-[2px] bg-white/60 transform translate-y-[3.7rem] pointer-events-none z-0"
+            style={{ right: 'calc(50% + 3px)', width: 'calc(40% - 48px - 3px)' }} />
+          <div className="absolute left-1/2 top-1/2 h-[2px] bg-[#ba924c]/60 transform translate-y-[3.7rem] pointer-events-none z-0"
+            style={{ left: 'calc(50% + 3px)', width: 'calc(40% - 48px - 3px)' }} />
 
           {/* Custom Center Dot */}
-          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 w-5 h-5 rounded-full z-10"
+          <div className="absolute left-1/2 top-6 transform -translate-x-1/2 translate-y-[10.8rem] w-5 h-5 rounded-full z-10"
             style={{ background: 'linear-gradient(90deg, white 50%, #ba924c 50%)' }} />
         </div>
       </div>
